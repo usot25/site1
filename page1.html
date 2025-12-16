@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cross domain site 1</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=https://www.onetrust.com/" />
+</head>
+<body>
+    <h2>cross site cookie banner & embeds test page 1</h2>
+
+    <!-- Vimeo Embed -->
+    <h2>vimeo video</h2>
+    <iframe src="https://player.vimeo.com/video/79419001" width="560" height="315" frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+
+    <!-- YouTube Embed -->
+    <h2>youtube video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DiAgCihHW58" title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <!-- Maps Embed -->
+    <h2>google maps</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.7007645344092!2d-84.36557542469244!3d33.768397632665625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045a3d87dc65%3A0x7c7b07dd7a300891!2sOneTrust!5e0!3m2!1sen!2sin!4v1764756042260!5m2!1sen!2sin"
+        width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <!-- Example of another 3rd-party embed (e.g., Twitter) -->
+    <h2>twitter embed</h2>
+    <blockquote class="twitter-tweet" data-media-max-width="560">
+        <p lang="en" dir="ltr">📣 registration is open for <a
+                href="https://twitter.com/hashtag/TrustWeek?src=hash&amp;ref_src=twsrc%5Etfw">#trustweek</a> 2025 on
+            tour!<br><br>our flagship event is where forward-thinking teams get in the loop on ai, data, and what’s
+            next.<br><br>🗓️ new york | september 9<br>🗓️ san francisco | september 30<br>🗓️ amsterdam | october
+            21<br><br>register now: <a href="https://t.co/D7w66lGSkx">https://t.co/D7w66lGSkx</a> <a
+                href="https://t.co/dCSMlZBxU6">pic.twitter.com/dCSMlZBxU6</a></p>&mdash; onetrust (@onetrust) <a
+            href="https://twitter.com/OneTrust/status/1940032855947579780?ref_src=twsrc%5Etfw">july 1, 2025</a>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!-- OneTrust cookies settings button start -->
+    <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie settings</button>
+    <!-- OneTrust cookies settings button end -->
+
+    <!-- OneTrust cookies list start -->
+    <button id="toggle-cookie-list">Show Cookie List</button>
+    <div id="ot-sdk-cookie-policy" style="display:none;"></div>
+    <script>
+        const btn = document.getElementById('toggle-cookie-list');
+        const cookieList = document.getElementById('ot-sdk-cookie-policy');
+        let visible = false;
+        btn.addEventListener('click', function () {
+            visible = !visible;
+            cookieList.style.display = visible ? 'block' : 'none';
+            btn.textContent = visible ? 'Hide Cookie List' : 'Show Cookie List';
+        });
+    </script>
+    <!-- OneTrust cookies list end -->
+</body>
+
+</html>
